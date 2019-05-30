@@ -7,11 +7,10 @@ author:
 - ^2^Instituto Nacional de Pesquisas da Amazônia _ INPA 
 - \* gisiane.biologia@gmail.com
 output:  
-  word_document:
-    reference_docx: scripts/template.docx
-bibliography: library/My_Collection.bib
-csl: library/plos-one.csl
-
+  html_document:
+    toc: true
+    toc_float: true
+    highlight: tango
 --- 
 ```{r pacotes, echo = FALSE, include= FALSE}
 if(!require("vegan")) install.packages ("vegan") # se ele não puder ser carregado ele vai instalar os pacotes
@@ -95,7 +94,7 @@ plot(1)
 
 ```
 
-![](figuras/figura1.Rplot.png)
+
 
 
 ## Discussão 
