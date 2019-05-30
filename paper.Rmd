@@ -1,0 +1,108 @@
+--- 
+title: "Meu projeto"
+
+author:
+- Lima, Gisiane Rodrigues^1^\*; Cornelius, Cintia^2^
+- ^1^Universidade Federal do Amazonas _ UFAM
+- ^2^Instituto Nacional de Pesquisas da Amazônia _ INPA 
+- \* gisiane.biologia@gmail.com
+output:  
+  word_document:
+    reference_docx: scripts/template.docx
+bibliography: library/My_Collection.bib
+csl: library/plos-one.csl
+
+--- 
+```{r pacotes, echo = FALSE, include= FALSE}
+if(!require("vegan")) install.packages ("vegan") # se ele não puder ser carregado ele vai instalar os pacotes
+if(!require("knitr"))install.packages("knitr")
+
+```
+
+
+
+## Resumo 
+
+## Introdução
+
+
+~Escrever~ sobre *ecologia* e **evolução** 
+
+~~Ecologia de paisagem~~
+
+H~2~O
+
+nome^2^
+
+- Item 1 
+  - Item 1.1
+
++ Item 2
+  + Item 2
+  
+3. Item 3
+
+4. Item 4
+  + Item 4.4
+
+## Material e Metódos
+
+### Coleta de dados
+
+### Análise de dados
+
+```{r, echo= F, eval= T, results='asis'}
+data("mtcars")
+summary(lm(mpg ~ carb, mtcars))
+```
+
+
+## Resultados
+
+A tabela "mtcars" tem `r ncol(mtcars)` colunas.
+
+A tabela "mtcars" tem `r nrow(mtcars)` linhas.
+
+Tabela 1: Um exemplo de modelos de carros antigos e suas características.
+```{r tabela, echo= F}
+data("mtcars")
+kable(mtcars)
+
+```
+
+
+A cerquinha abaixo não mostra o código abaixo e nem o resultado dele. 
+```{r cerquinha do plot, echo= FALSE, eval= FALSE}
+plot(1)
+
+```
+
+A cerquinha abaixo mostra o codigo e não mostra o resultado dele
+```{r, echo= TRUE, eval=FALSE}
+plot(1)
+```
+a cerquinha mostra codigo e resutlado 
+
+```{r, echo= T, eval= T}
+
+plot (1)
+
+```
+
+```{r, echo= F, eval= T, fig.cap= "figura 1"}
+plot(1)
+
+```
+
+![](figuras/figura1.Rplot.png)
+
+
+## Discussão 
+
+Aprendendo como fazer citação no texto [@Podos2016].A sitação deve estar no arquivo [@Fang2019].
+
+Segundo @Podos2016 isso pode acontecer
+
+Estou citando varias pessoas que fizeram isso [@Fang2019; @Podos2016]
+
+## Referências
